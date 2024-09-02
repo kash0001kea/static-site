@@ -1,0 +1,270 @@
+
+
+
+
+
+
+body{
+    margin: 100px;
+}
+
+h1, h2, h3, p{
+    font-family: sans-serif;
+}
+
+.logo h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.big_logo h1{
+    font-size: 10rem !important;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: normal;
+}
+
+h3 
+
+p 
+
+
+ul, li {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-family: sans-serif;
+    color: black !important;
+}
+
+/* -- Links -- */
+a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
+
+/* -- images -- */
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    gap: 30px;
+}
+
+
+
+/* ---------CATEGORIES--------- */
+.categories{
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    gap: 25px 50px;
+}
+
+.categories div{
+    width: 150px;
+    padding: 15px 50px;
+    border: solid 2px black;
+    border-radius: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    transition-duration: .2s;
+}
+
+.categories div:hover{
+    background-color: black;
+    color: white;
+    scale: 1.1;
+}
+
+/* --------- PRODUCT LIST --------- */
+#pl{
+    background-color: rgb(245, 245, 245);
+}
+
+.product_list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.product_list article{
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    /* border: tomato solid 1.5px; */
+    padding: 25px;
+    border-radius: 10px;
+    /* box-shadow: 5px 5px 20px ; */
+}
+
+.subtle{
+    opacity: 50%;
+}
+
+.price{
+    font-weight:bolder;
+    font-size: 2rem;
+}
+
+.product_list article .discounted,
+.product_list article .price span {
+  display: none;
+}
+
+.product_list article.onSale .discounted{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -40px;
+}
+
+.onSale .price{
+    text-decoration: line-through;
+    font-size: 1.5rem;
+    opacity: .25;
+}
+
+.discounted p:first-child{
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: tomato;
+}
+.discounted p:last-child{
+    background-color:tomato;
+    color: white;
+    padding: 10px 15px;
+}
+
+.product_list article.soldOut img {
+    opacity: 0.5;
+}
+  .product_list article.soldOut::before {
+    font-family: sans-serif;
+    content: "Sold Out";
+    position: absolute;
+    background: black;
+    color: white;
+    padding: 1.5rem;
+    opacity: 1;
+  }
+
+.product_list a{
+    /* border: black solid 1px; */
+    background-color: black;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 100px;
+    width: 100%;
+    transition-duration: .2s;
+}
+
+.product_list a:hover{
+    /* padding: 10px 110px; */
+    background-color: rgb(255, 149, 0);
+}
+
+
+/* --------- PRODUCT --------- */
+.product{
+    display: flex;
+    max-width: 1200px;
+    font-family: sans-serif;
+}
+
+.product h3{
+    font-size: 3rem;
+}
+
+.product_image{
+    flex-grow: 3;
+}
+
+.product_image img{
+    width: 100%;
+}
+
+.info{
+    border: solid black 1.5px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 20px 0 20px 0;
+}
+
+.info h2{
+    font-size: 1.5rem;
+}
+
+dt{
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+}
+
+.purchaseBox{
+    flex-grow: 1;
+    background-color: rgb(245, 245, 245);
+    padding: 4rem;
+    margin: 3rem;
+    max-width: 30%;
+    border-radius: 20px;
+}
+
+form{
+   display: flex;
+    flex-direction: column; 
+}
+
+label{
+    font-size: 1.5rem;
+}
+
+select{
+    /* background-color: black; */
+    background-color: orange;
+    color: white;
+    border: orange solid 1px;
+    border-radius: 100px;
+    font-size: 1.5rem;
+    padding: 0 .75rem;
+    width: 4rem;
+}
+
+button{
+    border: none;
+    border-radius: 100px;
+    background-color: black;
+    color:white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px 0px;
+    padding: 10px;
+    transition-duration: .2s;
+}
+
+button:hover{
+    background-color: orange;
+    scale: 1.1
+}
