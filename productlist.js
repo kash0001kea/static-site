@@ -38,6 +38,7 @@ function showProduct(product) {
         copy.querySelector(".rabat").textContent = "Save " + product.discount + "%";
         copy.querySelector(".rabatprice").textContent = "Now " + Math.round(rabatpris) + ".-";
     }
+    copy.querySelector(".read_more").setAttribute("href", `product.html?id=${product.id}`);
     //append
     document.querySelector(".product_list").appendChild(copy);
 }

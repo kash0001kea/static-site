@@ -46,7 +46,8 @@ a:link {
     text-decoration: none; 
   } 
   a:visited { 
-    text-decoration: none; 
+    text-decoration: none;
+    color: orange;
   } 
   a:hover { 
     text-decoration: none; 
@@ -188,10 +189,27 @@ ul{
 
 
 /* --------- PRODUCT --------- */
+.breadcrumbs{
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.breadcrumbs li a::after {
+    content: " > ";
+    font-size: 1rem;
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    margin: 0 10px;
+    transition: all 0.3s;
+  }
+
 .product{
     display: flex;
     max-width: 1200px;
     font-family: sans-serif;
+    gap: 3rem;
+    margin: 3rem 0;
 }
 
 .product h3{
@@ -226,7 +244,6 @@ dt{
     flex-grow: 1;
     background-color: rgb(245, 245, 245);
     padding: 4rem;
-    margin: 3rem;
     max-width: 30%;
     border-radius: 20px;
 }
