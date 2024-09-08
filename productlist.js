@@ -14,8 +14,8 @@ function showProduct(product) {
     const template = document.querySelector("#smallProductTemplate").content;
     
     //define "pris" and equation for discount price
-    const pris = product.price;
-    const rabatpris = pris - (pris * (product.discount/100)) ;
+    // const pris = product.price;
+    // const rabatpris = pris - (pris * (product.discount/100)) ;
     
     // make a copy
     const copy =template.cloneNode(true);
@@ -34,9 +34,10 @@ function showProduct(product) {
     }
     if(product.discount){
         //product is discount
-        copy.querySelector("article").classList.add("onSale")
+        copy.querySelector("article").classList.add("onSale");
         copy.querySelector(".rabat").textContent = "Save " + product.discount + "%";
-        copy.querySelector(".rabatprice").textContent = "Now " + Math.round(rabatpris) + ".-";
+        copy.querySelector(".rabatprice").textContent = "Now " + Math.round(product.price - (product.price * (product.discount/100))) + ".-";
+        // copy.querySelector(".rabatprice").textContent = "Now " + Math.round(rabatpris) + ".-";
     }
     copy.querySelector(".read_more").setAttribute("href", `product.html?id=${product.id}`);
     //append
